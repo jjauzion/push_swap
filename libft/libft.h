@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:09:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/01/31 10:02:42 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/01/31 13:52:42 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
+//int					ft_tab_itercheck(int *tab, int size, int (*f)(int));
 void				ft_striter(char *s, void (*f)(char *));
 int					ft_str_itercheck(char *s, int (*f)(int));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -120,5 +121,7 @@ void				*ft_realloc(void **src, size_t len, size_t size);
 long long int		ft_power(int nbr, int power);
 char				*ft_str_del_char(char **str, char c);
 int					ft_count_cinstr(const char *str, char c);
+int					ft_max(int a, int b);
+int					ft_min(int a, int b);
 
 #endif

@@ -6,13 +6,20 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/01/31 10:26:55 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/01/31 14:00:09 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all, clean, fclean, re, LIB
 
 SRC_NAME1 = ft_checker.c \
+			ft_free_stack.c \
+			ft_parser.c \
+			get_next_line.c \
+			ft_exec_cmd.c \
+			operation.c \
+			ft_display.c \
+			ft_issorted.c
 
 SRC_PATH1 = src/
 
@@ -29,7 +36,8 @@ INC_PATH2 = includes/
 INC_NAME1 = ft_printf.h \
 			libft.h
 
-INC_NAME2 = header.h
+INC_NAME2 = header.h \
+			get_next_line.h
 
 NAME = checker
 

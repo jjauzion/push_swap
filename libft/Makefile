@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/01/31 10:03:12 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/01/31 12:30:50 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,7 +98,9 @@ SRC_NAME1 = ft_memset.c \
 			ft_uni2utf8.c \
 			ft_imtoa.c \
 			ft_str_itercheck.c \
-			ft_isnumber.c
+			ft_isnumber.c \
+			ft_max.c \
+			ft_min.c
 
 SRC_NAME2 =	ft_printf.c \
 			ft_parse.c \
