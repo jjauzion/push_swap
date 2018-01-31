@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/01/30 18:18:13 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/01/31 10:26:55 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,15 @@ CC = gcc
 ifdef FLAG
 	ifeq ($(FLAG), no)
 	CFLAGS =
+	DBFLAGS =
 endif
 ifeq ($(FLAG), debug)
-	CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+	CFLAGS = -Wall -Wextra -Werror
+	DBFLAGS = -g3 -fsanitize=address
 endif
 else
 	CFLAGS = -Wall -Wextra -Werror
+	DBFLAGS =
 endif
 
 SRC = $(addprefix $(SRC_PATH1),$(SRC_NAME1))
@@ -61,14 +64,14 @@ CPPFLAGS = $(addprefix -I,$(INC_PATH1)) \
 all: LIB $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(LDFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(DBFLAGS) $(LDFLAGS) $(OBJ) -o $(NAME)
 
 LIB:
 	make -C libft
 
 $(OBJ_PATH1)%.o: $(SRC_PATH1)%.c $(INC) Makefile
 	@mkdir $(OBJ_PATH1) 2> /dev/null || true
-	$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
+	$(CC) $(CFLAGS) $(DBFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
 	make -C libft clean

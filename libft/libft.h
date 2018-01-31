@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:09:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/01/30 18:47:48 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/01/31 10:02:42 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int					ft_isdigit(int c);
 int					ft_ishexa(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
+int					ft_isnumber(char *str);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
