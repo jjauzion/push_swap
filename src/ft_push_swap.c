@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checker.c                                       :+:      :+:    :+:   */
+/*   ft_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/30 16:15:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/01 15:14:46 by jjauzion         ###   ########.fr       */
+/*   Created: 2018/02/01 11:58:07 by jjauzion          #+#    #+#             */
+/*   Updated: 2018/02/01 18:09:30 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int			main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	t_stack		*a;
 	t_stack		*b;
-	char		*command;
-	int			ret;
 
 	a = NULL;
 	if (argc <= 2)
@@ -28,18 +26,5 @@ int			main(int argc, char **argv)
 	if (ft_parser(&a, &b, argv, argc - 1))
 		return (1);
 	ft_display(*a, *b);
-	ret = 1;
-	while (ret == 1)
-	{
-		ret = (get_next_line(0, &command) && ft_exec_cmd(a, b, command));
-		ft_strdel(&command);
-		ft_display(*a, *b);
-	}
-	if (ft_issorted(*a) && b->top < 0)
-		ft_putendl("OK");
-	else
-		ft_putendl("KO");
-	ft_free_stack(&a);
-	ft_free_stack(&b);
-	return (0);
+	ft_sort(a, b);
 }

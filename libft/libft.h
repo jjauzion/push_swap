@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:09:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/01/31 13:52:42 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/01 19:36:00 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
-//int					ft_tab_itercheck(int *tab, int size, int (*f)(int));
 void				ft_striter(char *s, void (*f)(char *));
 int					ft_str_itercheck(char *s, int (*f)(int));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -98,6 +97,11 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *n);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+//int					ft_tab_itercheck(int *tab, int size, int (*f)(int));
+int					ft_tab_mean(int *tab, int nb_elm);
+int					ft_tab_min(int *tab, int nb_elm);
+//int					ft_tab_median(int *tab, int nb_elm);
 
 wchar_t				*ft_wstrcnew(size_t size, wchar_t c);
 int					ft_putwchar(wchar_t c);

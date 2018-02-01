@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:23:51 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/01/31 11:48:24 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/01 14:55:23 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,22 +90,23 @@ int				get_next_line(const int fd, char **line)
 	int				status;
 	int				len;
 
-	if (!line)
-		return (-1);
 	len = 0;
 	f = ft_file_lst(fd, &file_lst);
 	str = ft_strnew(BUFF_SIZE + ft_strlen(f->buff) - f->index + 1);
-	if (!f || !str)
+	if (!f || !str || !line)
 		return (ERROR);
 	if (ft_flush(str, f, &len))
 	{
 		*line = (char *)ft_realloc_line((void**)&str, len, 0);
 		return (EOL);
 	}
-	if ((status = ft_read(&str, f, &len)) == ERROR)
-		return (ERROR);
-	if (*str == '\0' && status == EOFF)
+	if ((status = ft_read(&str, f, &len)) == ERROR || (!*str && status == EOFF))
+	{
+		ft_strdel(&str);
+		if (status == ERROR)
+			return (ERROR);
 		return (EOFF);
+	}
 	*line = (char *)ft_realloc_line((void**)&str, len, 0);
 	return (EOL);
 }
