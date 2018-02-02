@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tab_median.c                                    :+:      :+:    :+:   */
+/*   ft_flush.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/01 19:04:19 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/01 19:05:33 by jjauzion         ###   ########.fr       */
+/*   Created: 2018/02/02 18:35:01 by jjauzion          #+#    #+#             */
+/*   Updated: 2018/02/02 18:51:50 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "header.h"
 
-int		ft_tab_median(int *tab, int nb_elm)
+int		ft_flush(t_stack *a, t_stack *b)
 {
-	int		i;
-	int		median;
+	int		pivot;
+	int		bottom;
 
-	if (!tab || nb_elm <= 0)
-		return (0);
-	median = tab[0];
-	i = 0;
-	while (++i < nb_elm)
-		sum += tab[i];
-	return (sum / nb_elm);
+	if (b->top < 0)
+		return (1);
+	pivot = b->data[0];
+	bottom = 0;
+	while (bottom <= b->top)
+	{
+		if (b->data[b->top] >= pivot)
+			ft_exec_cmd(a, b, "pa");
+		else
+		{
+			ft_exec_cmd(a, b, "rb");
+			bottom++;
+		}
+	}
+	ft_flush(a, b);
+	return (1);
 }
