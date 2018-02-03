@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 16:15:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/02 19:46:27 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/03 20:28:09 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int			main(int argc, char **argv)
 	ret = 1;
 	while (ret == 1)
 	{
-		ret = (get_next_line(0, &command) && ft_exec_cmd(a, b, command));
+		ret = (get_next_line(0, &command) && ft_exec_cmd(a, b, command, 0));
 		ft_strdel(&command);
 		ft_display(*a, *b);
 //		ft_printf("%5s|%5d|\t|%5d|\n", "mean:", ft_tab_mean(a->data, a->top + 1), ft_tab_mean(b->data, b->top + 1));

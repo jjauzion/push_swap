@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 11:58:07 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/03 19:30:45 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/03 20:31:50 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static void	ft_min2top(t_stack *a, t_stack *b)
 	while (a->data[a->top] > min)
 	{
 		if (i > a->top / 2)
-			ft_exec_cmd(a, b, "ra");
+			ft_exec_cmd(a, b, "ra", 1);
 		else
-			ft_exec_cmd(a, b, "rra");
+			ft_exec_cmd(a, b, "rra", 1);
 	}
 }
 
@@ -43,8 +43,7 @@ int		main(int argc, char **argv)
 	if (ft_parser(&a, &b, argv, argc - 1))
 		return (1);
 	ft_sort(a, b, 0, a->top);
-ft_printf("--------- END SORT ----------\n");
-ft_display(*a, *b);
 	ft_min2top(a, b);
-ft_display(*a, *b);
+/*ft_printf("--------- END SORT ----------\n");
+ft_display(*a, *b);*/
 }

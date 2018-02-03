@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 11:49:58 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/01/31 13:36:38 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/03 20:26:39 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	ft_init_cmdlst(t_cmd cmd_lst[12])
 	cmd_lst[11].cmd = "quit";
 }
 
-int			ft_exec_cmd(t_stack *a, t_stack *b, char *cmd)
+int			ft_exec_cmd(t_stack *a, t_stack *b, char *cmd, int option)
 {
 	t_cmd	cmd_list[12];
 	int		i;
@@ -55,6 +55,8 @@ int			ft_exec_cmd(t_stack *a, t_stack *b, char *cmd)
 		ft_printf("Unknown command ('quit' to exit)\n");
 		return (1);
 	}
+	if (option == 1)
+		ft_putendl(cmd_list[i].cmd);
 	cmd_list[i].fct(a, b);
 	return (1);
 }

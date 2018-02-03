@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 17:14:12 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/03 19:10:37 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/03 20:28:49 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct	s_command
 void			ft_free_stack(t_stack **s);
 int				ft_parser(t_stack **a, t_stack **b, char **argv, int size);
 int				get_next_line(const int fd, char **line);
-int				ft_exec_cmd(t_stack *a, t_stack *b, char *cmd);
+int				ft_exec_cmd(t_stack *a, t_stack *b, char *cmd, int option);
 void			ft_display(t_stack a, t_stack b);
 int				ft_issorted(t_stack a);
 void			ft_sort(t_stack *a, t_stack *b, int start, int end);
