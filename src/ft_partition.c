@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flush.c                                         :+:      :+:    :+:   */
+/*   ft_partition.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/02 18:35:01 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/02 18:51:50 by jjauzion         ###   ########.fr       */
+/*   Created: 2018/02/03 18:58:29 by jjauzion          #+#    #+#             */
+/*   Updated: 2018/02/03 19:18:25 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int		ft_flush(t_stack *a, t_stack *b)
+int		ft_partition(t_stack *a, t_stack *b, int start, int end)
 {
 	int		pivot;
-	int		bottom;
+	int		init;
 
-	if (b->top < 0)
-		return (1);
-	pivot = b->data[0];
-	bottom = 0;
-	while (bottom <= b->top)
+	(void) end;
+	init = start;
+	pivot = a->data[start];
+	while (start <= a->top)
 	{
-		if (b->data[b->top] >= pivot)
-			ft_exec_cmd(a, b, "pa");
+		if (a->data[a->top] <= pivot)
+			ft_exec_cmd(a, b, "pb");
 		else
 		{
-			ft_exec_cmd(a, b, "rb");
-			bottom++;
+			ft_exec_cmd(a, b, "ra");
+			start++;
 		}
 	}
-	ft_flush(a, b);
-	return (1);
+	while (start > init)
+	{
+		ft_exec_cmd(a, b, "rra");
+		start--;
+	}
+	ft_exec_cmd(a, b, "pa");
+	return (a->top);
 }

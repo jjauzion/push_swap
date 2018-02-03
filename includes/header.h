@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 17:14:12 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/02 19:06:26 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/03 19:10:37 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ int				get_next_line(const int fd, char **line);
 int				ft_exec_cmd(t_stack *a, t_stack *b, char *cmd);
 void			ft_display(t_stack a, t_stack b);
 int				ft_issorted(t_stack a);
-void			ft_sort(t_stack *a, t_stack *b, int bottom);
-int				ft_flush(t_stack *a, t_stack *b);
+void			ft_sort(t_stack *a, t_stack *b, int start, int end);
+void			ft_flush_b(t_stack *a, t_stack *b);
+int				ft_partition(t_stack *a, t_stack *b, int start, int end);
 
 void			ft_swapa(t_stack *a, t_stack *b);
 void			ft_swapb(t_stack *a, t_stack *b);
