@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 11:49:58 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/03 20:26:39 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/04 20:12:30 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int			ft_exec_cmd(t_stack *a, t_stack *b, char *cmd, int option)
 	}
 	if (option == 1)
 		ft_putendl(cmd_list[i].cmd);
+ft_display(*a, *b);
 	cmd_list[i].fct(a, b);
 	return (1);
 }
