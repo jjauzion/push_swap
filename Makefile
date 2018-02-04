@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/03 19:09:04 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/04 12:47:41 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC_NAME1 = ft_checker.c \
 
 SRC_NAME2 = ft_push_swap.c \
 			ft_sort.c \
+			ft_sort_b.c \
 			ft_free_stack.c \
 			ft_parser.c \
 			ft_exec_cmd.c \
