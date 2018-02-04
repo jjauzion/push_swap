@@ -6,13 +6,13 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/03 18:58:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/04 12:44:11 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/04 16:52:19 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int		ft_partition(t_stack *a, t_stack *b, int start)
+int			ft_partition(t_stack *a, t_stack *b, int start)
 {
 	int		pivot;
 	int		init;
