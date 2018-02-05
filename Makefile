@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/04 16:51:31 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/05 11:12:49 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ SRC_NAME2 = ft_push_swap.c \
 			ft_issorted.c \
 			ft_flush_b.c \
 			ft_partition.c \
-			ft_set_pivot.c
+			ft_set_pivot.c \
+			ft_get_index.c
 
 SRC_PATH1 = src/
 

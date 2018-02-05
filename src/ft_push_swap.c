@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 11:58:07 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/04 20:14:39 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/05 12:29:22 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int		main(int argc, char **argv)
 	}
 	if (((option = ft_parser(&a, &b, argv, argc - 1)) < 0))
 		return (1);
-	ft_set_pivot(a, b, 'a');
-	ft_sort(a, b, 0, a->top);
+	ft_sort(a, b, a->data[0], a->data[a->top]);
 	ft_min2top(a, b);
 }
