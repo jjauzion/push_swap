@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 17:53:50 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/05 18:38:18 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/06 21:01:46 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 {
 	int		pindex;
-	int		cpt;
 	int		start_i;
 	int		end_i;
 
@@ -30,17 +29,16 @@ void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 		ft_printf("value not found\n");
 		return ;
 	}
-	if (start_i >= end_i)
+	if (start_i >= end_i || !ft_isnsorted(*a, start_i, end_i))
 		return ;
-	cpt = 0;
-	while (end_i < a->top)
+	while (end_v != a->data[a->top])
 	{
-//ft_printf("++ra\t +++++\n");
-		ft_exec_cmd(a, b, "ra", 1);
-		end_i++;
-		start_i++;
-		cpt++;
+		if (end_i > a->top / 2)
+			ft_exec_cmd(a, b, "ra", 1);
+		else
+			ft_exec_cmd(a, b, "rra", 1);
 	}
+	start_i = ft_get_index(a, start_v);
 	pindex = ft_partition(a, b, start_i);
 //ft_printf("\t\t<-- OUT OF PARTITION\n");
 	ft_sort(a, b, a->data[start_i], a->data[pindex - 1]);

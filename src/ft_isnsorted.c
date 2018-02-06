@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_issorted.c                                      :+:      :+:    :+:   */
+/*   ft_isnsorted.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/31 13:43:10 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/05 11:55:23 by jjauzion         ###   ########.fr       */
+/*   Created: 2018/02/06 15:48:21 by jjauzion          #+#    #+#             */
+/*   Updated: 2018/02/06 15:48:27 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	Return the nb of cells preceded by a greater value then itself
+*/
+
 #include "header.h"
 
-int		ft_issorted(t_stack s, int start_i, int end_i)
+int		ft_isnsorted(t_stack s, int start_i, int end_i)
 {
 	int		i;
+	int		cpt;
 
+	cpt = 0;
 	i = end_i;
 	while (i > start_i)
 	{
 		if (s.data[i - 1] < s.data[i])
-			return (0);
+			cpt++;
 		i--;
 	}
-	return (1);
+	return (cpt);
 }

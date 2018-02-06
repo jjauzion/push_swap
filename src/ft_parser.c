@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 10:55:57 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/04 19:59:11 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/06 15:30:17 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ static int	ft_init_stack(t_stack **a, char **argv, int size, char *option)
 
 	(*a)->top = -1;
 	if (*option == 'v')
-		j = 1;
+		j = 2;
 	else
-		j = 0;
-	while (++j <= size)
+		j = 1;
+	while (size >= j)
 	{
-		tmp = ft_atoi(argv[j]);
+		tmp = ft_atoi(argv[size]);
 		i = (*a)->top;
 		while (i >= 0)
 		{
@@ -35,6 +35,7 @@ static int	ft_init_stack(t_stack **a, char **argv, int size, char *option)
 		}
 		(*a)->top++;
 		(*a)->data[(*a)->top] = tmp;
+		size--;
 	}
 	return (0);
 }

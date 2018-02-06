@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 16:15:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/05 11:57:44 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/06 18:40:37 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,15 @@ int			main(int argc, char **argv)
 	ret = 1;
 	while (ret == 1)
 	{
+		ret = (get_next_line(0, &command) && ft_exec_cmd(a, b, command, 0));
 		if (option == 1)
 		{
+			ft_printf("command : %s\n", command);
 			ft_display(*a, *b);
 		}
-		ret = (get_next_line(0, &command) && ft_exec_cmd(a, b, command, 0));
 		ft_strdel(&command);
 	}
-	if (ft_issorted(*a, 0, a->top) && b->top < 0)
+	if (!ft_isnsorted(*a, 0, a->top) && b->top < 0)
 		ft_putendl("OK");
 	else
 		ft_putendl("KO");

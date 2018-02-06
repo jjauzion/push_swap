@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 11:49:58 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/05 18:38:42 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/06 21:13:43 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int			ft_exec_cmd(t_stack *a, t_stack *b, char *cmd, int option)
 //ft_printf(">>>>>>\n");
 	if (option == 1)
 		ft_putendl(cmd_list[i].cmd);
-	if (option == 1)
 	cmd_list[i].fct(a, b);
 //ft_display(*a, *b);
 //ft_printf("<<<<<<\n");

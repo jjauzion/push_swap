@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/05 11:12:49 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/06 15:50:13 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC_NAME1 = ft_checker.c \
 			ft_exec_cmd.c \
 			operation.c \
 			ft_display.c \
-			ft_issorted.c
+			ft_isnsorted.c
 
 SRC_NAME2 = ft_push_swap.c \
 			ft_sort.c \
@@ -29,11 +29,12 @@ SRC_NAME2 = ft_push_swap.c \
 			ft_exec_cmd.c \
 			operation.c \
 			ft_display.c \
-			ft_issorted.c \
+			ft_isnsorted.c \
 			ft_flush_b.c \
 			ft_partition.c \
-			ft_set_pivot.c \
-			ft_get_index.c
+			ft_get_pivot.c \
+			ft_get_index.c \
+			ft_sort_small_tab.c
 
 SRC_PATH1 = src/
 

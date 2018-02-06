@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 17:14:12 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/05 12:37:41 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/06 15:48:04 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ int				ft_parser(t_stack **a, t_stack **b, char **argv, int size);
 int				get_next_line(const int fd, char **line);
 int				ft_exec_cmd(t_stack *a, t_stack *b, char *cmd, int option);
 void			ft_display(t_stack a, t_stack b);
-int				ft_issorted(t_stack a, int start_i, int end_i);
+int				ft_isnsorted(t_stack a, int start_i, int end_i);
 void			ft_sort(t_stack *a, t_stack *b, int start, int end);
 void			ft_sort_b(t_stack *a, t_stack *b);
 int				ft_partition(t_stack *a, t_stack *b, int start);
 int				ft_get_index(t_stack *s, int val);
-//void			ft_set_pivot(t_stack *a, t_stack *b, char option);
 int				ft_get_pivot(t_stack *a, int start_i, int end_i);
+int				ft_sort_small_tab(t_stack *a, t_stack *b, int start_i);
 
 void			ft_flush_b(t_stack *a, t_stack *b);
 
