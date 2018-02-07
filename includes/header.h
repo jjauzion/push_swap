@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 17:14:12 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/06 15:48:04 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/07 18:41:25 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int				ft_partition(t_stack *a, t_stack *b, int start);
 int				ft_get_index(t_stack *s, int val);
 int				ft_get_pivot(t_stack *a, int start_i, int end_i);
 int				ft_sort_small_tab(t_stack *a, t_stack *b, int start_i);
+int				ft_local_min(t_stack *s, int start_i);
+int				ft_local_max(t_stack *s, int start_i);
 
 void			ft_flush_b(t_stack *a, t_stack *b);
 

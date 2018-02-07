@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 11:58:07 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/06 15:59:43 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/07 13:13:40 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	ft_min2top(t_stack *a, t_stack *b)
 	while (a->data[++i] > min);
 	while (a->data[a->top] > min)
 	{
-		if (i > a->top / 2)
+		if (i >= a->top / 2)
 			ft_exec_cmd(a, b, "ra", 1);
 		else
 			ft_exec_cmd(a, b, "rra", 1);

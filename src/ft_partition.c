@@ -6,60 +6,64 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/03 18:58:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/06 20:34:23 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/07 18:56:55 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-static int	ft_early_exit(t_stack *a, int pivot, int start_i, int init)
+static int		ft_get_pivot_index(t_stack *b, int pivot)
+{
+	int	i;
+
+	i = -1;
+	while (b->data[++i] != pivot);
+	return (i);
+}
+
+static void		ft_pull_pivot(t_stack *a, t_stack *b, int pivot)
+{
+	int	i;
+
+	i = ft_get_pivot_index(b, pivot);
+	while (b->data[b->top] != pivot)
+		if (i >= b->top / 2)
+			ft_exec_cmd(a, b, "rb", 1);
+		else
+			ft_exec_cmd(a, b, "rrb", 1);
+	ft_exec_cmd(a, b, "pa", 1);
+}
+
+static int	ft_exit(t_stack *a, int pivot, int start_i)
 {
 	int		i;
 
-	if (start_i == init)
+	i = start_i;
+	while (i <= a->top)
 	{
-		i = start_i;
-		while (i < a->top)
-		{
-			if (a->data[i] < pivot)
-				return (0);
-			i++;
-		}
-		return (1);
+		if (a->data[i] <= pivot)
+			return (0);
+		i++;
 	}
-	else
-	{
-		i = -1;
-		while (++i < a->top)
-		{
-			if (a->data[i] < pivot)
-				return (0);
-		}
-		return (1);
-	}
+	return (1);
 }
 
 int			ft_partition(t_stack *a, t_stack *b, int start_i)
 {
 	int		pivot;
 	int		init;
-	int		exit;
+	int		pindex;
 
 	if (!ft_isnsorted(*a, start_i, a->top))
 		return (a->top);
-//ft_printf("--> IN PARTITION : BEFORE start_i = %d\n", start_i);
-//ft_display(*a, *b);
-//getchar();
+//ft_printf("--> IN PARTITION : BEFORE start_i = %d", start_i);
 	if (ft_sort_small_tab(a, b, start_i))
-		return (a->top);
-//ft_display(*a, *b);
-//ft_printf("--> IN PARTITION : start_i = %d\n", start_i);
+		return (start_i + 1);
 	init = start_i;
 	pivot = ft_get_pivot(a, start_i, a->top);
-//ft_printf("start_i = %d ; pivot = %d\t <-- IN PARTITION.c\n", start_i, pivot);
+//ft_printf(" ; pivot = %d", pivot);
 //getchar();
-	exit = 0;
-	while (start_i <= a->top && !exit)
+	while (!ft_exit(a, pivot, start_i))
 	{
 		if (a->data[a->top] <= pivot)
 			ft_exec_cmd(a, b, "pb", 1);
@@ -73,18 +77,17 @@ int			ft_partition(t_stack *a, t_stack *b, int start_i)
 			ft_exec_cmd(a, b, "ra", 1);
 			start_i++;
 		}
-		if (a->data[a->top] == pivot)
-			exit = ft_early_exit(a, pivot, start_i, init);
 	}
-	if (exit)
-		return (a->top);
+	pindex = ft_get_pivot_index(b, pivot);
 	while (init > 0 && start_i > init)
 	{
-		ft_exec_cmd(a, b, "rra", 1);
+		if (((pindex + 1 - (start_i - init)) < (b->top - pindex)) && (b->data[b->top] != pivot))
+			ft_exec_cmd(a, b, "rrr", 1);
+		else
+			ft_exec_cmd(a, b, "rra", 1);
 		start_i--;
+		pindex--;
 	}
-	while (b->data[b->top] != pivot)
-		ft_exec_cmd(a, b, "rb", 1);
-	ft_exec_cmd(a, b, "pa", 1);
+	ft_pull_pivot(a, b, pivot);
 	return (a->top);
 }

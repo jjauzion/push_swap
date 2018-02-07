@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 17:53:50 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/06 21:01:46 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/07 13:20:49 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 	}
 	start_i = ft_get_index(a, start_v);
 	pindex = ft_partition(a, b, start_i);
-//ft_printf("\t\t<-- OUT OF PARTITION\n");
+//ft_printf("\t\tstart_i = %d ; pindex = %d <-- OUT OF PARTITION\n", start_i, pindex);
 	ft_sort(a, b, a->data[start_i], a->data[pindex - 1]);
 }
