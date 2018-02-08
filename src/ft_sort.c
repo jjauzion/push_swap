@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 17:53:50 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/08 16:49:52 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/08 19:34:53 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 	int		start_i;
 	int		end_i;
 
-	if (a->top <= 16 && b->top < 0)
+	if (a->top <= 20 && b->top < 0)
 	{
 		ft_fulltab5(a, b);
 		return ;

@@ -1,6 +1,6 @@
 #include "header.h"
 
-void	ft_min2top_a(t_stack *a, t_stack *b, char option)
+void	ft_min2top_a(t_stack *a, t_stack *b)
 {
 	int	min;
 	int	i;
@@ -17,15 +17,15 @@ void	ft_min2top_a(t_stack *a, t_stack *b, char option)
 	}
 }
 
-void	ft_max2top_b(t_stack *a, t_stack *b, char option)
+void	ft_max2top_b(t_stack *a, t_stack *b)
 {
-	int	min;
+	int	max;
 	int	i;
-////////////////////
-	min = ft_tab_min(b->data, b->top + 1);
+
+	max = ft_tab_max(b->data, b->top + 1);
 	i = -1;
-	while (b->data[++i] > min);
-	while (b->data[b->top] > min)
+	while (b->data[++i] < max);
+	while (b->data[b->top] < max)
 	{
 		if (i >= b->top / 2)
 			ft_exec_cmd(a, b, "rb", 1);
