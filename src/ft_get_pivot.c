@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/04 16:43:20 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/07 19:00:09 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/08 10:40:30 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,12 @@ int		ft_get_pivot(t_stack *s, int start_i, int end_i)
 	mean = ft_get_mean(s->data, start_i, end_i);
 	min = ft_local_min(s, start_i);
 	max = ft_local_max(s, start_i);
-//	if (end_i - start_i + 1 == 10)
+//	if (end_i - start_i + 1 <= 15 && end_i - start_i + 1 > 8)
 //		target = min + 3;
 //	else
 		target = mean;
+//	if (start_i == 0)
+//		target = mean;
 	delta = ABS((s->data[start_i] - target));
 	pivot = s->data[start_i];
 	i = start_i;

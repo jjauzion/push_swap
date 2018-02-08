@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/07 18:41:42 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/08 16:57:01 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,10 @@ SRC_NAME2 = ft_push_swap.c \
 			ft_get_pivot.c \
 			ft_get_index.c \
 			ft_sort_small_tab.c \
-			min_max_fct.c
+			min_max_fct.c \
+			ft_fulltab5.c \
+			ft_reverse_sortb.c \
+			min2top.c
 
 SRC_PATH1 = src/
 

@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 17:14:12 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/07 18:41:25 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:57:44 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,10 @@ int				ft_get_pivot(t_stack *a, int start_i, int end_i);
 int				ft_sort_small_tab(t_stack *a, t_stack *b, int start_i);
 int				ft_local_min(t_stack *s, int start_i);
 int				ft_local_max(t_stack *s, int start_i);
+int				ft_fulltab5(t_stack *a, t_stack *b);
+void			ft_reverse_sortb(t_stack *a, t_stack *b);
+void			ft_min2top_a(t_stack *a, t_stack *b);
+void			ft_max2top_b(t_stack *a, t_stack *b);
 
 void			ft_flush_b(t_stack *a, t_stack *b);
 

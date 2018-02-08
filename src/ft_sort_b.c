@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/04 12:47:22 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/07 18:56:45 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:50:41 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@ void			ft_sort_b(t_stack *a, t_stack *b)
 
 	if (b->top < 0)
 		return ;
+	if (b->top < 25)
+	{
+		ft_reverse_sortb(a, b);
+		return ;
+	}
 	init = a->top + 1;
 	pivot = ft_get_pivot(b, 0, b->top);
 //ft_printf("pivot = %d\t <-- IN SORT_B.c\n", pivot);

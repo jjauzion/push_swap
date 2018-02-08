@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/06 12:21:32 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/07 18:40:29 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/08 10:41:13 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ static int		ft_tab5(t_stack *a, t_stack *b, int start_i)
 
 int		ft_sort_small_tab(t_stack *a, t_stack *b, int start_i)
 {
+//ft_printf("tab size = %d\n", a->top - start_i + 1);
 	if (start_i == a->top - 1)
 		return (ft_tab2(a, b, start_i));
 	else if (start_i == a->top - 2)

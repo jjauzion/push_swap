@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 17:53:50 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/07 13:20:49 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/08 16:49:52 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 	int		start_i;
 	int		end_i;
 
-//ft_printf("--> IN SORT : start_v = %d ; end_v = %d\n", start_v, end_v);
+	if (a->top <= 16 && b->top < 0)
+	{
+		ft_fulltab5(a, b);
+		return ;
+	}
 	ft_sort_b(a, b);
-//ft_printf("\t\t<-- OUT OF SORT_B : start_v = %d ; end_v = %d\n", start_v, end_v);
-//getchar();
 	start_i = ft_get_index(a, start_v);
 	end_i = ft_get_index(a, end_v);
 	if (start_i < 0 || end_i < 0)
@@ -40,6 +42,5 @@ void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 	}
 	start_i = ft_get_index(a, start_v);
 	pindex = ft_partition(a, b, start_i);
-//ft_printf("\t\tstart_i = %d ; pindex = %d <-- OUT OF PARTITION\n", start_i, pindex);
 	ft_sort(a, b, a->data[start_i], a->data[pindex - 1]);
 }
