@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 17:53:50 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/08 19:34:53 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/09 20:29:36 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ void	ft_sort(t_stack *a, t_stack *b, int start_v, int end_v)
 	ft_sort_b(a, b);
 	start_i = ft_get_index(a, start_v);
 	end_i = ft_get_index(a, end_v);
-	if (start_i < 0 || end_i < 0)
-	{
-		ft_printf("value not found\n");
-		return ;
-	}
 	if (start_i >= end_i || !ft_isnsorted(*a, start_i, end_i))
 		return ;
 	while (end_v != a->data[a->top])

@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/04 12:47:22 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/08 18:08:19 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/09 20:30:32 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void		ft_push_pivot(t_stack *a, t_stack *b, int pivot)
 	ft_exec_cmd(a, b, "pa", 1);
 }
 
-static int	ft_exit(t_stack *b, int pivot)
+static int		ft_exit(t_stack *b, int pivot)
 {
 	int		i;
 
@@ -48,8 +48,6 @@ void			ft_sort_b(t_stack *a, t_stack *b)
 		return ;
 	init = a->top + 1;
 	pivot = ft_get_pivot(b, 0, b->top);
-//ft_printf("pivot = %d\t <-- IN SORT_B.c\n", pivot);
-//getchar();
 	while (!ft_exit(b, pivot))
 	{
 		if (b->data[b->top] > pivot)

@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 10:55:57 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/06 15:30:17 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/09 18:44:20 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,7 @@ int			ft_parser(t_stack **a, t_stack **b, char **argv, int size)
 	*a = (t_stack*)malloc(sizeof(t_stack));
 	*b = (t_stack*)malloc(sizeof(t_stack));
 	if (!(*b) || !(*a))
-	{
-		ft_putendl("Error");
 		return (-1);
-	}
 	(*a)->data = (int*)malloc(sizeof(int) * size);
 	(*b)->data = (int*)ft_memalloc(sizeof(int) * size);
 	if (!(*a)->data || !(*b)->data)
@@ -84,7 +81,8 @@ int			ft_parser(t_stack **a, t_stack **b, char **argv, int size)
 		return (-1);
 	}
 	(*b)->top = -1;
-	if (ft_check_input(argv, size, &option) || ft_init_stack(a, argv, size, &option))
+	if (ft_check_input(argv, size, &option) ||
+			ft_init_stack(a, argv, size, &option))
 	{
 		ft_free_stack(a);
 		ft_free_stack(b);

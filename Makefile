@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/08 16:57:01 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/09 20:58:29 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRC_NAME1 = ft_checker.c \
 			get_next_line.c \
 			ft_exec_cmd.c \
 			operation.c \
+			rotate_fct.c \
+			rev_rotate_fct.c \
 			ft_display.c \
 			ft_isnsorted.c
 
@@ -28,9 +30,10 @@ SRC_NAME2 = ft_push_swap.c \
 			ft_parser.c \
 			ft_exec_cmd.c \
 			operation.c \
+			rotate_fct.c \
+			rev_rotate_fct.c \
 			ft_display.c \
 			ft_isnsorted.c \
-			ft_flush_b.c \
 			ft_partition.c \
 			ft_get_pivot.c \
 			ft_get_index.c \
@@ -38,7 +41,8 @@ SRC_NAME2 = ft_push_swap.c \
 			min_max_fct.c \
 			ft_fulltab5.c \
 			ft_reverse_sortb.c \
-			min2top.c
+			min2top.c \
+			ft_rotate_stack.c
 
 SRC_PATH1 = src/
 

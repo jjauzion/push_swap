@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:09:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/08 17:48:38 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/09 20:43:47 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,11 +98,10 @@ void				ft_lstadd(t_list **alst, t_list *n);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-//int					ft_tab_itercheck(int *tab, int size, int (*f)(int));
 int					ft_tab_mean(int *tab, int nb_elm);
 int					ft_tab_min(int *tab, int nb_elm);
 int					ft_tab_max(int *tab, int nb_elm);
-//int					ft_tab_median(int *tab, int nb_elm);
+int					ft_tab_itercheck(int *tab, int size, int (*f)(int));
 
 wchar_t				*ft_wstrcnew(size_t size, wchar_t c);
 int					ft_putwchar(wchar_t c);
