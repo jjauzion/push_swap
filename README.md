@@ -1,4 +1,4 @@
-PUSH SWAP prjoject @42
+PUSH SWAP project @42
 
 Usage:
 ->	git clone the repository
