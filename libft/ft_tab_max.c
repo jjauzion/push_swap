@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 17:47:14 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/08 17:48:16 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/12 15:06:45 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ int		ft_tab_max(int *tab, int nb_elm)
 	max = tab[0];
 	i = 0;
 	while (++i < nb_elm)
-		max = (max < tab[i]) ? max = tab[i] : max;
+	{
+		if (max < tab[i])
+			max = tab[i];
+	}
 	return (max);
 }

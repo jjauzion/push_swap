@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/11 18:34:54 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/12 15:00:08 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,3 +127,4 @@ re: fclean all
 norme:
 	norminette $(SRC)
 	norminette $(INC)
+	norminette $(LIB_PATH)

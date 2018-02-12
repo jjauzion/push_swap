@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 18:24:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/01 19:02:56 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/12 15:07:25 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ int		ft_tab_min(int *tab, int nb_elm)
 	min = tab[0];
 	i = 0;
 	while (++i < nb_elm)
-		min = (min > tab[i]) ? min = tab[i] : min;
+	{
+		if (min > tab[i])
+			min = tab[i];
+	}
 	return (min);
 }
