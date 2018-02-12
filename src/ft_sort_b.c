@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/04 12:47:22 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/09 20:30:32 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:14:27 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ static void		ft_push_pivot(t_stack *a, t_stack *b, int pivot)
 	int	i;
 
 	i = -1;
-	while (b->data[++i] != pivot);
+	while (b->data[++i] != pivot)
+	{
+	}
 	while (b->data[b->top] != pivot)
 		if (i >= b->top / 2)
 			ft_exec_cmd(a, b, "rb", 1);

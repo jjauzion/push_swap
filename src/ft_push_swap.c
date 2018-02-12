@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 11:58:07 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/08 16:56:15 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/12 10:03:15 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ int		main(int argc, char **argv)
 		return (1);
 	ft_sort(a, b, a->data[0], a->data[a->top]);
 	ft_min2top_a(a, b);
+	ft_free_stack(&a);
+	ft_free_stack(&b);
 }

@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/09 20:58:29 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/11 18:34:54 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,7 @@ SRC_NAME2 = ft_push_swap.c \
 			ft_sort_small_tab.c \
 			min_max_fct.c \
 			ft_fulltab5.c \
-			ft_reverse_sortb.c \
-			min2top.c \
+			minmax2top.c \
 			ft_rotate_stack.c
 
 SRC_PATH1 = src/
@@ -99,12 +98,12 @@ LDFLAGS = $(addprefix $(LIB_PATH),$(LDLIBS))
 CPPFLAGS = $(addprefix -I,$(INC_PATH1)) \
 		   $(addprefix -I,$(INC_PATH2))
 
-all: $(NAME1) $(NAME2)
+all: LIB $(NAME1) $(NAME2)
 
-$(NAME1): LIB $(OBJ1)
+$(NAME1): $(LDFLAGS) $(OBJ1)
 	$(CC) $(DBFLAGS) $(LDFLAGS) $(OBJ1) -o $(NAME1)
 
-$(NAME2): LIB $(OBJ2)
+$(NAME2): $(LDFLAGS) $(OBJ2)
 	$(CC) $(DBFLAGS) $(LDFLAGS) $(OBJ2) -o $(NAME2)
 
 LIB:

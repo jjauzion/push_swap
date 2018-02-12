@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:23:51 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/01 14:55:23 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/11 19:05:19 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int				get_next_line(const int fd, char **line)
 	}
 	if ((status = ft_read(&str, f, &len)) == ERROR || (!*str && status == EOFF))
 	{
-		ft_strdel(&str);
+		*line = str;
 		if (status == ERROR)
 			return (ERROR);
 		return (EOFF);
