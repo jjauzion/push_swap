@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 16:15:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/12 15:08:09 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/13 15:42:59 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,7 @@ int			main(int argc, char **argv)
 
 	a = NULL;
 	if (argc < 2)
-	{
-		ft_printf("Usage : At least one integer argument required\n");
 		return (1);
-	}
 	if (((option = ft_parser(&a, &b, argv, argc - 1)) < 0))
 		return (1);
 	if ((option == 1 || option == 3))

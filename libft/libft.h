@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:09:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/09 20:43:47 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/13 15:53:08 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char				*ft_strnstr
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
+long long int		ft_atolli(const char *str);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
 int					ft_isalpha(int c);
