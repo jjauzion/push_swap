@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/03 18:58:29 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/12 15:38:53 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/17 17:40:55 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static int		ft_push2b(t_stack *a, t_stack *b, int pivot, int start_i)
 	{
 		if (a->data[a->top] <= pivot)
 			ft_exec_cmd(a, b, "pb", 1);
-		else if (b->data[b->top] != pivot)
+		else if (b->top >= 0 && b->data[b->top] != pivot)
 		{
 			ft_exec_cmd(a, b, "rr", 1);
 			start_i++;

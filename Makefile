@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/12 15:00:08 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/17 17:50:29 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,7 @@ ifdef FLAG
 endif
 ifeq ($(FLAG), debug)
 	CFLAGS = -Wall -Wextra -Werror
-	DBFLAGS = -g
+	DBFLAGS = -g3 -fsanitize=address
 endif
 else
 	CFLAGS = -Wall -Wextra -Werror
@@ -116,7 +116,7 @@ $(OBJ_PATH1)%.o: $(SRC_PATH1)%.c $(INC) Makefile
 clean:
 	make -C libft clean
 	rm -f $(OBJ1) $(OBJ2)
-	@rmdir $(OBJ_PATH1) 2> /dev/null || true
+	rmdir $(OBJ_PATH1) 2> /dev/null || true
 
 fclean: clean
 	make -C libft fclean
