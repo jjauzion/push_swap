@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:23:51 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/11 19:05:19 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/17 16:50:39 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ static t_file	*ft_file_lst(const int fd, t_file **f)
 	elm->fd = fd;
 	elm->ret = 0;
 	elm->index = 0;
+	elm->buff[0] = '\0';
 	elm->next = *f;
 	*f = elm;
 	return (elm);
