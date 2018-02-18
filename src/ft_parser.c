@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 10:55:57 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/17 12:27:02 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/18 13:39:05 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_init_stack(t_stack **a, char **argv, int size, int *option)
 	while (--size >= j)
 	{
 		tmp = ft_atolli(argv[size + 1]);
-		if (tmp > 2147483647 || tmp < -2147483648)
+		if (tmp > INT_MAX || tmp < INT_MIN)
 			return (1);
 		i = (*a)->top + 1;
 		while (--i >= 0)

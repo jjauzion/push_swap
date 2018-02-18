@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:09:27 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/13 15:53:08 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/18 13:40:19 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <wchar.h>
 # include <locale.h>
+# include <limits.h>
 
 # define ABS(Value) (Value < 0) ? -Value : Value
 # define WRONG_UTF8(c) ((c >= 0xD800 && c <= 0xDFFF) || c > 0x10FFFF || c < 0)
