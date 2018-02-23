@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 09:52:44 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/18 13:55:58 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/23 11:17:28 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 **	it can be passed safely to ft_atoi function.
 **	Returns 1 if the input string contains a well formated number for atoi.
 **	Returns 0 otherwise.
-**	Example : 
+**	Example :
 **		"	gfkj-235453"		is conisdered bad formated	-> return 0
 **		"235453gfdklg"			is conisdered bad formated	-> return 0
 **		" 	-235453 		"	is conisdered well formated	-> return 1

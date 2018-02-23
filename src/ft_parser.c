@@ -6,7 +6,7 @@
 /*   By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 10:55:57 by jjauzion          #+#    #+#             */
-/*   Updated: 2018/02/18 13:39:05 by jjauzion         ###   ########.fr       */
+/*   Updated: 2018/02/23 11:06:47 by jjauzion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ static int	ft_get_option(char **argv, int *option, int size)
 	*option = 0;
 	while (i < size && argv[i][0] == '-' && ft_isalpha((int)argv[i][1]))
 	{
-		if (ft_strequ(argv[i], "-v"))
+		if (ft_strequ(argv[i], "-v") && *option != 1)
 			*option += 1;
-		else if (ft_strequ(argv[i], "-c"))
+		else if (ft_strequ(argv[i], "-c") && *option != 2)
 			*option += 2;
 		else
 			i = size;
