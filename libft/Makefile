@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/13 15:53:28 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/26 17:02:46 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC_NAME1 = ft_memset.c \
 			ft_strstr.c \
 			ft_strnstr.c \
 			ft_atoi.c \
-			ft_atolli.c \
+			ft_atoim.c \
 			ft_putchar.c \
 			ft_putnbr.c \
 			ft_isalpha.c \
@@ -104,7 +104,8 @@ SRC_NAME1 = ft_memset.c \
 			ft_min.c \
 			ft_tab_mean.c \
 			ft_tab_min.c \
-			ft_tab_max.c
+			ft_tab_max.c \
+			get_next_line.c
 
 SRC_NAME2 =	ft_printf.c \
 			ft_parse.c \

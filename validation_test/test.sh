@@ -150,7 +150,7 @@ for i in range {1..99}
 		RET=`./push_swap $ARG | wc -l >> res`
 done
 
-./tester res
+./validation_test/tester res
 
 rm res
 echo -e '\033[0mGetting an average in a range from 0 to 499'
@@ -161,5 +161,5 @@ for i in range {1..99}
 		RET=`./push_swap $ARG | wc -l >> res`
 done
 
-./tester res
+./validation_test/tester res
 rm res

@@ -6,7 +6,7 @@
 #    By: jjauzion <jjauzion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/17 14:43:00 by jjauzion          #+#    #+#              #
-#    Updated: 2018/02/17 17:50:29 by jjauzion         ###   ########.fr        #
+#    Updated: 2018/02/26 17:34:58 by jjauzion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@
 SRC_NAME1 = ft_checker.c \
 			ft_free_stack.c \
 			ft_parser.c \
-			get_next_line.c \
 			ft_exec_cmd.c \
 			operation.c \
 			rotate_fct.c \
@@ -60,8 +59,7 @@ INC_PATH2 = includes/
 INC_NAME1 = ft_printf.h \
 			libft.h
 
-INC_NAME2 = header.h \
-			get_next_line.h
+INC_NAME2 = header.h
 
 NAME1 = checker
 
