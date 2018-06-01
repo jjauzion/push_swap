@@ -1,5 +1,5 @@
 # PUSH_SWAP
-Sort a pile of number using a second pile and with limited list of possible operations.
+Sort a pile of number using a second pile with a limited list of possible operations.
 
 # Operation
 -	sa : swap a - swap the first two elements of pile A.
