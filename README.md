@@ -1,7 +1,7 @@
 # PUSH_SWAP
 Sort a pile of number using a second pile with a limited list of possible operations.
 
-# Operation
+# Operations
 -	sa : swap a - swap the first two elements of pile A.
 -	sb : swap b - swap the first two elements of pile B.
 -	ss : sa and sb simultaneously.
@@ -14,7 +14,7 @@ Sort a pile of number using a second pile with a limited list of possible operat
 -	rrb : reverse rotate b - Shift all element of pile B by 1 toward the bottom. The last element becomes the first.
 -	rrr : rra and rrb simultaneously.
 
-# Usage:
+# Usage
 -	git clone the repository
 -	make
 -	./push_swap arg1 arg2 ...
